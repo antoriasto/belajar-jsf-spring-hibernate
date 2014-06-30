@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> 
+    
+<hibernate-configuration>
+    <session-factory>        
+        
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        
+        <!-- User Management -->
+        <!-- <mapping class="inc.cygnus.model.User" />
+        <mapping class="inc.cygnus.model.Role" /> -->
+        
+        <!-- Master -->
+        <mapping class="inc.john.belajar.bean.Customer" />
+        
+    </session-factory>         
+</hibernate-configuration>
