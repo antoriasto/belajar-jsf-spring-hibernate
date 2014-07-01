@@ -5,13 +5,14 @@
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 		
 		<application>
-			<locale-config>
+			<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+			<!-- <locale-config>
 				<default-locale>en</default-locale>
 			</locale-config>
 			<resource-bundle>
-				<base-name>id.fai.jsf.blog.messages</base-name>
+				<base-name>messages</base-name>
 				<var>msg</var>
-			</resource-bundle>
+			</resource-bundle> -->
 		</application>              
 		<!-- <managed-bean>
 			<managed-bean-name>indexController</managed-bean-name>

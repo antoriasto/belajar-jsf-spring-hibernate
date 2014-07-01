@@ -6,11 +6,11 @@
 <hibernate-configuration>
     <session-factory>        
         
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
         
         <!-- User Management -->
-        <!-- <mapping class="inc.cygnus.model.User" />
-        <mapping class="inc.cygnus.model.Role" /> -->
+        <mapping class="inc.john.belajar.bean.User" />
+        <mapping class="inc.john.belajar.bean.Role" />
         
         <!-- Master -->
         <mapping class="inc.john.belajar.bean.Customer" />

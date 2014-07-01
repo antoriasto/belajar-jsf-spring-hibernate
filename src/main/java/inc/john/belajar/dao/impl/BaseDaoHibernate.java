@@ -25,7 +25,7 @@ public class BaseDaoHibernate<T> {
     }
     
     @SuppressWarnings("unchecked")
-    public T getByIdBase(Long id) {
+    public T findByIdBase(Long id) {
         return (T) sessionFactory.getCurrentSession().get(domainClass, id);
     }
     
@@ -40,7 +40,7 @@ public class BaseDaoHibernate<T> {
     }
     
     @SuppressWarnings("unchecked")
-    public List<T> getAllBase() {
+    public List<T> findAllDataBase() {
         return sessionFactory.getCurrentSession().createQuery("from " + domainClass.getName())
                 .list();
     }

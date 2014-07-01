@@ -12,20 +12,17 @@ public class CustomerDaoImpl extends BaseDaoHibernate<Customer> implements Custo
 
 	@Override
 	public Customer save(Customer customer) {
-		// TODO Auto-generated method stub
-		return null;
+		return saveBase(customer);
 	}
 
 	@Override
 	public Customer delete(Customer customer) {
-		// TODO Auto-generated method stub
-		return null;
+		return deleteBase(customer);
 	}
 
 	@Override
 	public Customer findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return findByIdBase(id);
 	}
 
 	@Override
