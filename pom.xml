@@ -8,6 +8,7 @@
 
 	<properties>
 		<org.springframework.version>3.2.0.RELEASE</org.springframework.version>
+		<!-- <org.springframework.version="">3.2.3.RELEASE</org> -->
 	</properties>
 
 	<dependencies>
@@ -22,6 +23,13 @@
 			<version>6.0</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- JSR-330 && Spring -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+
 
 		<!-- Spring Framework -->
 		<dependency>
@@ -77,6 +85,13 @@
 			<version>${org.springframework.version}</version>
 			<type>jar</type>
 			<scope>compile</scope>
+		</dependency>
+		<!-- Various Application Context utilities, including EhCache, JavaMail, 
+			Quartz, and Freemarker integration Define this if you need any of these integrations -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework.version}</version>
 		</dependency>
 		<!-- End of spring framework -->
 

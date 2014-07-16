@@ -10,8 +10,15 @@
 	<ui:define name="content">
 
 		<h:form>
-			<h:button value="customerPage.xhtml"></h:button>
-			
+			<h:body>
+				<h:form>
+					<h:inputText value="#{customerController.customer.name}"></h:inputText>
+					<h:commandButton label="Submit"></h:commandButton>
+					<br />
+					<!-- <h:outputText value="#{customerController.customer.name}"></h:outputText> -->
+				</h:form>
+				<!-- <h:button value="customerPage.xhtml"></h:button> -->
+			</h:body>
 		</h:form>
 	</ui:define>
 

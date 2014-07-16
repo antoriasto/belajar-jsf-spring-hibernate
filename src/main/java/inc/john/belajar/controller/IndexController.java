@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 @Controller
-@Scope("view")
+//@Scope("view")
 public class IndexController implements Serializable {
 
 	private static final long serialVersionUID = -8645107805701400666L;
