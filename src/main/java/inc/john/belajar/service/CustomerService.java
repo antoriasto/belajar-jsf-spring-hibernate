@@ -9,4 +9,5 @@ public interface CustomerService {
 	Customer delete(Customer customer);
 	Customer findById(Long id);
 	List<Customer> findAllData(String search, int start, int size);
+	List<Customer> findAllData(String search, String orderBy, int start, int size);
 }

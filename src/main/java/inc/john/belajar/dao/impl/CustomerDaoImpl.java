@@ -31,4 +31,27 @@ public class CustomerDaoImpl extends BaseDaoHibernate<Customer> implements Custo
 		return null;
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Customer> findAllData(String search, String orderBy,
+			int start, int size) {
+		StringBuilder stringBuilderCustomer = new StringBuilder(
+                "from Customer c where c.name like :search");
+
+        if (!search.equals("%")) {
+            search = "%" + search + "%";
+        }
+
+        if (orderBy != null) {
+            stringBuilderCustomer.append(" order by name ").append(orderBy);
+        }
+
+        return (List<Customer>) sessionFactory.getCurrentSession()
+                .createQuery(stringBuilderCustomer.toString())
+                .setString("search", search)
+                .setFirstResult(start)
+                .setMaxResults(size)
+                .list();
+	}
+
 }
